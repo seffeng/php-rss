@@ -1,0 +1,31 @@
+{
+    "name": "seffeng/rss",
+    "description": "PHP extension rss",
+    "keywords": ["PHP", "laravel", "yii2", "seffeng", "rss"],
+    "license": "MIT",
+    "homepage": "https://github.com/seffeng/php-rss",
+    "authors": [
+        {
+            "name": "seffeng",
+            "email": "save.zxf@gmail.com",
+            "homepage": "https://github.com/seffeng"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seffeng\\Rss\\": "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Seffeng\\Rss\\Tests\\" : "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}
