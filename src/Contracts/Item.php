@@ -156,10 +156,12 @@ class Item
                     $element->appendChild($this->document->createCDATASection($value));
                     return $element;
                 }
-            } elseif ($key === 'pubDate') {
+            } elseif ($key === 'pubDate' && $value) {
                 $value = date(DATE_RFC2822, is_numeric($value) ? $value : strtotime($value));
             }
-            return $this->document->createElement($key, $value);
+            $element = $this->document->createElement($key);
+            $element->appendChild($this->document->createTextNode($value));
+            return $element;
         }
         return null;
     }
